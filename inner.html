@@ -9,109 +9,113 @@
   <body>
     <div class="page-wrapper">
       <div class="wrapper">
-      <header class="main-header">
-        <div class="logo">
-          <a href="index.html"><img src="img/logo.png" width="153" height="63" alt="logo"></a>
-        </div>
-        <ul>
-          <li>
-            <a href="#">Каталог</a>
+        <header>
+          <div class="main-header clearfix">
+            <div class="logo">
+              <img src="img/logo.png" width="153" height="63" alt="logo">
+            </div>
+            <nav class="menu-header">
               <ul>
                 <li>
-                  <a href="#">Новинки</a>
+                  <a href="#">Каталог</a>
+                    <ul class="sub-menu">
+                      <li>
+                        <a href="#">Новинки</a>
+                      </li>
+                      <li>
+                        <a href="inner.html">Сливочное</a>
+                      </li>
+                      <li>
+                        <a href="#">Щербеты</a>
+                      </li>
+                      <li>
+                        <a href="#">Фруктовый лед</a>
+                      </li>
+                      <li>
+                        <a href="#">Мелорин</a>
+                      </li>
+                    </ul>
                 </li>
                 <li>
-                  <a href="inner.html">Сливочное</a>
+                  <a href="#">Доставка и оплата</a>
                 </li>
                 <li>
-                  <a href="#">Щербеты</a>
-                </li>
-                <li>
-                  <a href="#">Фруктовый лед</a>
-                </li>
-                <li>
-                  <a href="#">Мелорин</a>
+                  <a href="#">О компании</a>
                 </li>
               </ul>
-          </li>
-          <li>
-            <a href="#">Доставка и оплата</a>
-          </li>
-          <li>
-            <a href="#">О компании</a>
-          </li>
-        </ul>
+            </nav>
+            <div class="user-block">
 
-        <div class="user-block">
-
-            <!--Форма поиска  -->
-          <div class="search-header">
-            <form class="search-form" action="/echo" method="post">
-              <a href="#" class="search-btn">Поиск</a>
-              <div class="search-box">
-                <input type="search" name="search" placeholder="Что ищем?">
+                <!--Форма поиска  -->
+              <div class="search-header">
+                <form class="search-form" action="/echo" method="post">
+                  <a href="#" class="search-btn">Поиск</a>
+                  <div class="search-box">
+                    <input type="search" name="search" placeholder="Что ищем?">
+                  </div>
+                </form>
               </div>
-            </form>
-          </div>
 
-            <!--Поле Вход  -->
-          <div class="login-header">
-            <a href="#" class="login">Вход</a>
-            <div class="login-box">
-              <form class="login-box" action="/echo" method="post">
-                <input type="email" name="email" placeholder="Электронная почта">
-                <input type="password" name="password" placeholder="Пароль">
-                <button type="submit" class="btn">Войти</button>
-                <div class="login-form">
-                  <a href="#" class="">Забыли пароль?</a>
-                  <a href="#" class="">Новая регистрация</a>
+                <!--Поле Вход  -->
+              <div class="login-header">
+                <a href="#" class="login">Вход</a>
+                <div class="login-box">
+                  <form class="login-box" action="/echo" method="post">
+                    <input type="email" name="email" placeholder="Электронная почта">
+                    <input type="password" name="password" placeholder="Пароль">
+                    <button type="submit" class="btn">Войти</button>
+                    <div class="login-form">
+                      <a href="#" class="">Забыли пароль?</a>
+                      <a href="#" class="">Новая регистрация</a>
+                    </div>
+                  </form>
                 </div>
-              </form>
+              </div>
+
+              <!--Корзина -->
+            <div class="basket-header">
+              <a href="#" class="basket">Корзина</a>
+              <div class="basket-form">
+                <a href="basket-delete"></a>
+                <div class="basket-img">
+                  <img src="img/ice-cart.png"  width="33" height="33" alt="ice">
+                </div>
+                <div class="basket-title">
+                  <p>Пломбир с апельсиновым джемом</p>
+                </div>
+                <div class="quantity">
+                  <p>1.5 кг <span>х 200 руб.</span></p>
+                </div>
+                <div class="price">
+                  <p>300 руб.</p>
+                </div>
+                <a href="basket-delete"></a>
+                <div class="basket-img">
+                  <img src="img/ice-cart-2.png"  width="33" height="33" alt="ice">
+                </div>
+                <div class="basket-title">
+                  <p>Клубничный пломбир с присыпкой  из белого шоколада</p>
+                </div>
+                <div class="quantity">
+                  <p>1.5 кг <span>х 300 руб.</span></p>
+                </div>
+                <div class="price">
+                  <p>450 руб.</p>
+                </div>
+                <div class="total">
+                  <p>Итого: 750 руб.</p>
+                  <a href="#" class="btn">Оформить заказ</a>
+                </div>
+              </div>
+            </div>
             </div>
           </div>
 
-            <!--Корзина -->
-          <div class="card-header">
-            <a href="#" class="card">Корзина</a>
-            <div class="form-card">
-              <a href="card-delete"></a>
-              <div class="card-img">
-                <img src="img/ice-cart.png" width="33" height="33" alt="ice">
-              </div>
-              <div class="card-title">
-                <p>Пломбир с апельсиновым джемом</p>
-              </div>
-              <div class="quantity">
-                <p>1.5 кг <span>х 200 руб.</span></p>
-              </div>
-              <div class="price">
-                <p>300 руб.</p>
-              </div>
-              <a href="card-delete"></a>
-              <div class="card-img">
-                <img src="img/ice-cart-2.png" width="33" height="33" alt="ice">
-              </div>
-              <div class="card-title">
-                <p>Клубничный пломбир с присыпкой  из белого шоколада</p>
-              </div>
-              <div class="quantity">
-                <p>1.5 кг <span>х 300 руб.</span></p>
-              </div>
-              <div class="price">
-                <p>450 руб.</p>
-              </div>
-              <div class="total">
-                <p>Итого: 750 руб.</p>
-                <a href="#" class="btn">Оформить заказ</a>
-              </div>
-            </div>
+          <div class="contact ">
+            <span class="working">С 10 до 20, ежедневно</span><br>
+            <b>8 812 450-25-25</b>
           </div>
-        </div>
-        <div class="contact">
-          <span class="working">С 10 до 20, ежедневно</span>
-          <b>8 812 450-25-25</b>
-        </div>
-      </header>
+        </header>
 
   			<!-- хлебные крошки -->
   		<main class="container">
@@ -164,7 +168,7 @@
   			</div>
 
   			<!-- Ассортимент мороженого -->
-  			<div class="icecream">
+  			<div class="icecream-card">
   				<!-- Первый ряд -->
   					<article class="card">
   						<div class="card-img">
