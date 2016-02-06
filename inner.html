@@ -128,11 +128,11 @@
   			</section>
 
   			<!-- Фильтры -->
-  			<div class="filters">
+  			<div class="filters clearfix">
   				<h1>Сливочное мороженое </h1>
   				<form action="https://echo.htmlacademy.ru/" method="post">
-  					<div class="sort">
-  						<h2>Сортировка:</h2>
+  					<div class="filters-sort">
+  						<h2 class="name">Сортировка:</h2>
   						<select name="sort">
   							<option value="По популярности">По популярности</option>
   							<option value="Сначала недорогие">Сначала недорогие</option>
@@ -140,23 +140,23 @@
   							<option value="По жирности">По жирности</option>
   						</select>
   					</div>
-  					<div class="sort-price">
-  						<h2>Цена: 100 руб. – 500 руб.</h2>
+  					<div class="filters-sort-price">
+  						<h2 class="name">Цена: 100 руб. – 500 руб.</h2>
   						<div class="range-controls">
                   <div class="scale"></div>
                   <div class="toggle min-toggle"></div>
                   <div class="toggle max-toggle"></div>
               </div>
   					</div>
-  					<div class="sort-fat">
-  						<h2>Жирность:</h2>
+  					<div class="filters-fat">
+  						<h2 class="name">Жирность:</h2>
   						<input type="radio" id="radio-1" name="radio"><label for="radio-1">0%</label>
   						<input type="radio" id="radio-2" name="radio" checked><label for="radio-2">до 10%</label>
   						<input type="radio" id="radio-3" name="radio"><label for="radio-3">до 30%</label>
   						<input type="radio" id="radio-4" name="radio"><label for="radio-4">выше 30%</label>
   					</div>
-  					<div class="topping">
-  						<h2>Наполнители:</h2>
+  					<div class="filters-topping">
+  						<h2 class="name">Наполнители:</h2>
   						<input type="checkbox" id="checkbox-1" name="checkbox" checked><label for="checkbox-1">Шоколадные</label>
   						<input type="checkbox" id="checkbox-2" name="checkbox" checked><label for="checkbox-2">Сахарные присыпки</label>
   						<input type="checkbox" id="checkbox-3" name="checkbox"><label for="checkbox-3">Фрукты</label>

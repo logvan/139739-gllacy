@@ -21,43 +21,50 @@ body {
 	padding: 0 2.5%;
 }
 .main-header {
-	padding: 9px 27px 0;
-	box-sizing: border-box;
-
+	padding: 9px 0 0 27px;
 }
+
 .logo {
 	float: left;
 	width: 155px;
 }
+
 .menu-header {
 	float: left;
+	font-size: 0;
 	width: 380px;
 	padding: 0;
-
+	padding-left: 25px;
+	position: relative;
 }
+.menu-header  ul {
+	padding: 0;
+	margin: 0;
+}
+
 .menu-header li {
 	display: inline-block;
+	vertical-align: top;
+	font-size: 16px;
 	list-style: none;
 	margin-right: 25px;
 }
-.menu-header li a {
+.menu-header a {
 	display: block;
 	color: #fff;
 }
 
-.menu-header ul ul {
-	display: none;
-	font-size: 14px;
-}
 
-.menu-header ul li:hover>ul {
+.menu-header li:hover>ul {
 	display: block;
 }
 .sub-menu {
-	float: left;
-	width: 140px;
+	display: none;
+	position: absolute;
+	width: 150px;
 	padding: 0;
 	margin-top:10px;
+	font-size: 14px;
 }
 
 .user-block {
@@ -65,7 +72,9 @@ body {
 	width: 280px;
 	margin-top: 14px;
 }
-.user-block>div{
+.search-header,
+.login-header,
+.basket-header {
 	display: inline-block;
 	vertical-align: top;
 	margin-right: 10px;
@@ -76,10 +85,6 @@ body {
 	height:31px;
 	border-radius: 15px;
 	background: #a1b5aa;
-}
-
-.search-header form {
-	display:none;
 }
 
 .login-header {
@@ -96,9 +101,6 @@ body {
 	padding-top: 9px;
 
 }
-.login-header form {
-	display: none;
-}
 
 .basket-header {
 	width: 117px;
@@ -114,13 +116,14 @@ body {
 	padding-top: 9px;
 }
 
+.login-box ,
+.search-form,
 .basket-form {
 	display: none;
 }
 
 .contact {
-	float: right;
-	width: 192px;
+	text-align: right;
 }
 
 .contact .working {
@@ -132,22 +135,25 @@ body {
 	color: #fff;
 }
 
-.header ul li{
+.header li{
 	display: inline-block;
 }
 
-.header li a{
+.header a{
 	padding-right: 20px;
 }
 
-
-.filters h2{
+.name {
 	color: #fff;
 	font-size: 14px;
 }
 
-.filters div {
+.filters-sort,
+.filters-sort-price,
+.filters-fat,
+.filters-topping {
 	display: inline-block;
+	vertical-align: top;
 }
 
 
@@ -155,26 +161,27 @@ body {
    /*БЛОКИ  С ТОПИНГАМИ*/
 
 
+
 .topping {
 	margin-top: 40px;
 }
 
-.banner-left {
-	float: left;
+.banner {
 	width: 43.3%;
-	background: url(../img/berry.jpg) no-repeat center ;
-	background-size: cover;
 	border-radius: 15px;
 	padding: 0 20px;
 }
 
+.banner-left {
+	float: left;
+	background: url(../img/berry.jpg) no-repeat center ;
+	background-size: cover;
+}
+
 .banner-right {
 	float: right;
-	width: 43.3%;
-	background: url(../img/choco.jpg) no-repeat center ;
+	background: url(../img/choco.jpg) no-repeat center;
 	background-size: cover;
-	border-radius: 15px;
-	padding: 0 20px;
 }
 
 h2 {
@@ -203,16 +210,8 @@ h2 {
 }
 
 .btn-slide {
-	display: inline-block;
 	font-size: 31.48px;
-	color: #fff;
-	text-align: center;
-	text-decoration: none;
 	padding: 14px 45px;
-	background: #ee5f3f;
-	box-sizing: border-box;
-	border-radius: 25px;
-	box-shadow: 0 2px 2px rgba(172,16,0,.6);
 }
 
 
@@ -246,7 +245,7 @@ h2 {
 	vertical-align: top;
 }
 
-.four{
+.card:last-child {
 	margin-right: 0px;
 }
 .price {
@@ -264,7 +263,7 @@ h2 {
 }
 
 .about h1 {
-	font-size: 24px;
+	font-size: 25px;
 	color: #323232;
 }
 
@@ -321,7 +320,7 @@ h2 {
 	width: 305px;
 }
 
-.number li a{
+.number a {
 	text-decoration: none;
 }
 
