@@ -4,8 +4,9 @@ body {
 	font-family: "Roboto", "Arial", sans-serif;
 	font-weight: bold;
 	color: #000;
-	background: #9aaea3 url(../img/bg-inner.png) center;
+	background: #97aca1;
 }
+
 
 body>input[type="radio"] {
 	display: none;
@@ -50,11 +51,12 @@ hr {
 	max-width: 1200px;
 	min-width: 900px;
 	margin: 0 auto;
-	padding: 0 2.5%;
+	padding: 0 1.5%;
+	box-sizing: border-box;
 }
 
 .main-header {
-	padding: 9px 0 0 27px;
+	padding: 9px 0 0 ;
 }
 
 .logo {
@@ -67,7 +69,7 @@ hr {
 	width: 400px;
 	font-size: 0;
 	padding: 0;
-	padding-left: 16px;
+	padding-left: 19px;
 	position: relative;
 	margin-top: 14px;
 }
@@ -97,11 +99,19 @@ hr {
 	text-decoration: none;
 }
 
+.active {
+	border-radius: 15px;
+	background: #d07058;
+	color: #333;
+	padding: 4px 13px;
+	text-decoration: none;
+}
+
 .menu>a:active{
 	box-shadow: inset 0 1px 2px 0 #898989;
 }
 
-.menu-header li:hover>ul {
+.menu:hover>ul {
 	display: block;
 }
 
@@ -172,7 +182,7 @@ hr {
 
 .user-block {
 	float: right;
-	width: 280px;
+	width: 265px;
 	margin-top: 14px;
 }
 
@@ -197,19 +207,19 @@ hr {
 .search {
 	position: relative;
 	display: inline-block;
-	width: 35px;
-	height:35px;
+	width: 32px;
+	height:32px;
 	border-radius: 20px;
 	background-color: rgba(255, 255, 255, 0.2);
-	margin-right: 10px;
+	margin-right: 6px;
 	text-decoration: none;
 }
 
 .search::before {
 	content: "";
 	position: absolute;
-	top: 0px;
-	left: 0px;
+	top: -1px;
+	left: -1px;
 	width: 32px;
 	height: 32px;
 	border-radius: 15px;
@@ -372,8 +382,8 @@ input[name="password"]:focus ~ label {
 .login {
 	position: relative;
   display: inline-block;
-  padding: 8px 10px;
-  font-size: 16px;
+  padding: 6px 10px;
+  font-size: 14px;
   font-family: "Roboto", Verdana, sans-serif;
   line-height: 20px;
   font-weight: 500;
@@ -391,7 +401,7 @@ input[name="password"]:focus ~ label {
 .login::before {
 	content: "";
 	position: absolute;
-	top: 7px;
+	top: 5px;
 	left: 15px;
 	width: 21px;
 	height: 20px;
@@ -497,8 +507,8 @@ input[name="password"]:focus ~ label {
 .basket {
 	position: relative;
   display: inline-block;
-  padding: 8px 10px;
-  font-size: 16px;
+  padding: 6px 10px;
+  font-size: 14px;
   font-family: "Roboto", Verdana, sans-serif;
   line-height: 20px;
   font-weight: 500;
@@ -515,8 +525,8 @@ input[name="password"]:focus ~ label {
 .basket::before {
 	content: "";
 	position: absolute;
-	top: 7px;
-	left: 15px;
+	top: 6px;
+	left: 14px;
 	width: 21px;
 	height: 20px;
 	background: url(../img/card.png) no-repeat center;
@@ -679,6 +689,8 @@ input[name="password"]:focus ~ label {
 .breadcrumbs {
 	padding: 0;
 	margin: 0;
+	width: 300px;
+	margin-top: 15px;
 }
 
 .breadcrumbs a {
@@ -702,6 +714,12 @@ input[name="password"]:focus ~ label {
 .contact {
 	text-align: right;
 	vertical-align: top;
+	margin-top: -7px;
+}
+
+.contact-inner {
+	width: 300px;
+	float: right;
 }
 
 .contact .working {
@@ -731,7 +749,7 @@ input[name="password"]:focus ~ label {
 	color: #fff;
 	font-size: 14px;
 	padding-left: 15px;
-	margin: 10px 0;
+	margin: 5px 0 0;
 }
 
 .filters-sort {
@@ -782,12 +800,19 @@ input[name="password"]:focus ~ label {
 
 .range-controls .toggle {
 	position: absolute;
-  top: 11px;
+  top: 9px;
   left: 0px;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background: #fff;
+}
+
+.range-controls .toggle:hover {
+	top: 8px;
+  width: 23px;
+  height: 23px;
+	cursor: pointer;
 }
 
 .range-controls .toggle-min{
@@ -833,19 +858,20 @@ input[type="radio"] + label {
 	line-height: 20px;
 	font-size: 16px;
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: middle;
 	cursor: pointer;
+
 }
 
 input[type="radio"] + label::before{
 	content: "";
 	display: block;
-	width: 25px;
-	height: 25px;
+	width: 26px;
+	height: 27px;
 	background: url(../img/sprite.png) no-repeat;
 	background-position: -42px -41px;
 	position: absolute;
-	top: -1px;
+	top: -3px;
 	left: 0;
 }
 
@@ -853,7 +879,25 @@ input[type="radio"]:checked + label::before {
 		background-position: -6px -41px;
 }
 
+input[type="radio"] + label:hover::before {
+	background: url(../img/sprite_bold.png) no-repeat;
+	background-position: -42px -41px;
+}
 
+input[type="radio"]:checked + label:hover::before {
+	background: url(../img/sprite_bold.png) no-repeat;
+	background-position: -6px -41px;
+}
+
+input[type="radio"]:checked:disabled + label::before {
+	background: url(../img/sprite_disabled.png) no-repeat;
+	background-position: -6px -41px;
+}
+
+input[type="radio"]:disabled + label::before {
+	background: url(../img/sprite_disabled.png) no-repeat;
+	background-position: -42px -41px;
+}
 
 
 						/*ЧЕКБОКС*/
@@ -869,7 +913,7 @@ input[type="checkbox"] + label {
 	line-height: 20px;
 	font-size: 16px;
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: middle;
 	cursor: pointer;
 	color: #fff;
 }
@@ -877,18 +921,39 @@ input[type="checkbox"] + label {
 input[type="checkbox"] + label::before{
 	content: "";
 	display: block;
-	width: 25px;
-	height: 25px;
+	width: 26px;
+	height: 27px;
 	background: url(../img/sprite.png) no-repeat;
 	background-position: -40px -5px;
 	position: absolute;
-	top: -1px;
+	top: -3px;
 	left: 0;
 }
 
 input[type="checkbox"]:checked + label::before {
 	background-position: -5px -5px;
 }
+
+input[type="checkbox"] + label:hover::before {
+	background: url(../img/sprite_bold.png) no-repeat;
+	background-position: -40px -5px;
+}
+
+input[type="checkbox"]:checked + label:hover::before {
+	background: url(../img/sprite_bold.png) no-repeat;
+	background-position: -5px -5px;
+}
+
+input[type="checkbox"]:checked:disabled + label::before {
+	background: url(../img/sprite_disabled.png) no-repeat;
+	background-position: -5px -5px;
+}
+
+input[type="checkbox"]:disabled + label::before {
+	background: url(../img/sprite_disabled.png) no-repeat;
+	background-position: -40px -5px;
+}
+
 
 
 
@@ -897,6 +962,7 @@ input[type="checkbox"]:checked + label::before {
 	font-size: 35px;
 	line-height: 30px;
 	color: #fff;
+	margin-top: 5px;
 }
 
 
@@ -963,7 +1029,7 @@ input[type="checkbox"]:checked + label::before {
 
 .slides {
 	position: relative;
-	margin-top: 260px;
+	margin-top: 268px;
 	text-align: center;
 	color: #fff;
 }
@@ -993,10 +1059,14 @@ input[type="checkbox"]:checked + label::before {
   cursor: pointer;
 }
 
+.slides-control label:hover {
+  background-color: rgba(248,247,244,.5);
+}
+
 .slides-control {
   position: absolute;
-  bottom: 25px;
-  left: 0;
+  bottom: 20px;
+  left: 10px;
   z-index: 20;
   font-size: 0;
 }
@@ -1035,9 +1105,10 @@ input[type="checkbox"]:checked + label::before {
 }
 
 .banner {
-	width: 43.3%;
+	width: 48.9%;
 	border-radius: 15px;
 	padding: 0 19px;
+	box-sizing: border-box;
 }
 
 .banner-left {
@@ -1052,6 +1123,10 @@ input[type="checkbox"]:checked + label::before {
 	background-size: cover;
 }
 
+.banner h2 {
+	margin: 24px 0 22px 5px;
+}
+
 h2 {
 	color: #fff;
 	font-size: 35px;
@@ -1061,11 +1136,13 @@ h2 {
 .banner-right p {
 	color: #fff;
 	font-size: 17px;
+	margin-left: 10px;
+	margin-bottom: 43px;
 }
 
  .topping .btn-banner {
 	float: right;
-	margin-bottom: 20px;
+	margin-bottom: 22px;
 	font-size: 18px;
 	line-height: 25px;
 	padding: 10px 20px;
@@ -1093,13 +1170,16 @@ h2 {
 }
 
 .btn-slide {
-	padding: 12px 50px;
+	padding: 12px 45px;
+	padding-right: 50px;
+	margin-left: 25px;
 	font-weight: 600;
 	font-size: 31px;
 	line-height: 41px;
 	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 	border-radius: 100px;
 	box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+	box-sizing: border-box;
 }
 
 .btn-banner:hover ,
@@ -1143,7 +1223,8 @@ h2 {
 	width: 22.2%;
 	font-size: 16px;
 	text-align: center;
-	margin-top: 36px;
+	margin-top: 43px;
+
 	margin-right: 2.2%;
 	position: relative;
 }
@@ -1229,13 +1310,15 @@ h2 {
 	font-size: 0;
 	border-radius: 20px;
 	padding: 25px 20px 0;
-	margin-top: 40px;
+	margin-top: 45px;
 }
 
 .about h1 {
 	font-size: 25px;
 	color: #323232;
-	margin-bottom: 31px;
+	margin-bottom: 29px;
+	margin-top: 4px;
+	margin-left: 10px;
 }
 
 .about li {
@@ -1251,7 +1334,7 @@ h2 {
 }
 
 .about li:nth-child(odd) {
-	margin-right: 80px;
+	margin-right: 64px;
 }
 
 .about-img  {
@@ -1261,8 +1344,8 @@ h2 {
 .about-img::before {
 	content: "";
 	position: absolute;
-	top: -10px;
-	left: -55px;
+	top: -11px;
+	left: -52px;
 	width: 47px;
 	height: 47px;
 }
@@ -1284,11 +1367,11 @@ h2 {
 }
 
 .news-blog {
-	margin-top: 40px;
+	margin-top: 34px;
 }
 .blog {
 	float: left;
-	width: 45%;
+	width: 48.9%;
 	min-height: 221px;
 	background:#fff url(../img/blog.jpg) no-repeat 100px center;
 	-webkit-background-size: cover;
@@ -1316,7 +1399,7 @@ h2 {
 
 .news {
 	float: right;
-	width: 45%;
+	width: 48.9%;
 	min-height: 221px;
 	background: url(../img/pattern.png) repeat center ;
 	-webkit-background-size: cover;
@@ -1363,7 +1446,7 @@ input[name="email-news"]:focus {
 
 .form-input {
 	position: relative;
-	margin-bottom: 15px;
+	/*margin-bottom: 15px;*/
 	margin-top: 20px;
 }
 
@@ -1429,8 +1512,8 @@ input[name="email-news"]:focus ~ label {
 .feedback p {
 	display: block;
 	width: 210px;
-	font-size: 14px;
-	line-height: 20px;
+	font-size: 12px;
+	line-height: 15px;
 	font-weight: normal;
 	padding: 0;
 	margin: 0;
@@ -1576,6 +1659,7 @@ footer {
 
 .footer-links a {
 	color: #fff;
+	font-size: 13px;
 }
 
 .providers {
@@ -1635,10 +1719,16 @@ footer {
 
 					/*ССЛЫКИ*/
 
+
 .login-link a:hover,
 .footer-links a:hover,
 .made-in a:hover {
 	color: #f1b89c;
+}
+
+
+.blog a:hover {
+	color: #ec593c;
 }
 
 
@@ -1858,6 +1948,7 @@ footer {
 .textarea-wrap textarea:focus {
   border: 2px solid #8fbdec;
   outline: none;
+	box-shadow: none;
 }
 
 .modal-form  input:valid,
